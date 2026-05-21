@@ -306,7 +306,18 @@ df_recommend = (
 
 ## 실행 방법
 
-### Frontend
+### 1. Backend 실행
+
+```bash
+cd backend
+python -m venv venv
+venv\Scripts\activate
+pip install -r requirements.txt
+python -c "from app.database import engine; from app.models import Base; Base.metadata.create_all(bind=engine)"
+python -m uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+```
+
+### 2. Frontend 실행
 
 ```bash
 cd frontend
@@ -314,18 +325,15 @@ npm install
 npm start
 ```
 
-### Backend
+### 3. 부가기능 확인
 
-```bash
-cd backend
-pip install -r requirements.txt
-uvicorn app.main:app --reload
-```
+- 백엔드 서버 실행 후 `http://localhost:8000/docs`에서 API 문서를 확인할 수 있습니다.
+- Expo 실행 후 터미널에 표시되는 QR 코드나 실행 옵션을 통해 앱을 확인할 수 있습니다.
 
 ## 프로젝트를 통해 배운 점
 
 이 프로젝트를 하면서 데이터 분석은 거창한 모델 학습에서만 시작되는 것이 아니라, 데이터를 열어보고 이상한 값을 찾는 일에서 시작된다는 것을 배웠습니다. 결측치가 있다고 무조건 평균이나 최빈값으로 채우는 것이 아니라, 그 컬럼이 실제 서비스에서 어떤 의미인지 먼저 판단해야 했습니다.
 
-특히 위치 데이터는 평균값으로 채우면 안 되고, 주소와 좌표는 실제 장소와 연결되어야 하기 때문에 API 보강이 더 적합했습니다. 카테고리 역시 비어 있다고 단순히 '기타'로 끝내는 것이 아니라, 음식점명과 브랜드명, 메뉴 키워드를 이용해 다시 분류해야 추천 품질이 좋아졌습니다.
+특히 위치 데이터는 평균값으로 채우면 안 되고, 주소와 좌표는 실제 장소와 연결되어야 하기 때문에 API 보강이 더 적합했습니다. 카테고리 역시 비어 있다고 단순히 `기타`로 끝내는 것이 아니라, 음식점명과 브랜드명, 메뉴 키워드를 이용해 다시 분류해야 추천 품질이 좋아졌습니다.
 
 결국 이 프로젝트의 핵심은 “앱이 추천할 수 있는 믿을 만한 데이터셋을 직접 만든 것”입니다. 원천 데이터에서 출발해 결측을 보강하고, 불필요한 업종을 제거하고, 사람이 이해하기 쉬운 카테고리로 다시 정리하면서 데이터 분석과 서비스 개발이 어떻게 연결되는지 경험할 수 있었습니다.
