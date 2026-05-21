@@ -24,15 +24,15 @@
 <p align="center">
   <img src="images/screen-survey-spicy.jpg" width="210" alt="매운맛 설문 화면" />
   <img src="images/screen-survey-salty.jpg" width="210" alt="간 선호도 설문 화면" />
-  <img src="images/screen-loading-analysis.jpg" width="210" alt="AI 분석 대기 화면" />
+  <img src="images/screen-loading-analysis.jpg" width="210" alt="추천 대기 화면" />
 </p>
 
 1. 앱 진입
    - Mechuri 소개 화면에서 로그인 또는 회원가입을 선택합니다.
 2. 취향 입력
    - 식단 제한, 매운맛 정도, 간 선호도, 예산, 새로운 메뉴 도전 여부를 선택합니다.
-3. 추천 분석
-   - 사용자의 응답값을 추천 API로 전달하고, 분석 대기 중에는 미니게임 화면을 제공해 지루함을 줄였습니다.
+3. 추천 대기
+   - 사용자의 응답값을 추천 API로 전달하고, 추천 결과를 기다리는 동안 미니게임 화면을 제공해 지루함을 줄였습니다.
 4. 메뉴 추천
    - 메뉴명, 카테고리, 평균 가격, 매칭률, 추천 사유를 보여줍니다.
 5. 주변 식당 확인
