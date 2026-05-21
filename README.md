@@ -4,9 +4,9 @@
 이 프로젝트에서 가장 중요하게 다룬 부분은 단순히 화면을 만드는 것이 아니라, 추천에 사용할 수 있는 음식점 데이터를 직접 수집하고 정제하며 결측치를 줄여 앱에서 바로 쓸 수 있는 형태로 만드는 과정이었습니다.
 
 <p align="center">
-  <img src="images/KakaoTalk_20260506_224122017.jpg" width="210" alt="Mechuri 시작 화면" />
-  <img src="images/KakaoTalk_20260506_224122017_01.jpg" width="210" alt="로그인 화면" />
-  <img src="images/KakaoTalk_20260513_214400912.jpg" width="210" alt="추천 결과 화면" />
+  <img src="images/screen-welcome.jpg" width="210" alt="Mechuri 시작 화면" />
+  <img src="images/screen-login.jpg" width="210" alt="로그인 화면" />
+  <img src="images/screen-recommendations.jpg" width="210" alt="추천 결과 화면" />
 </p>
 
 ## 프로젝트를 시작한 이유
@@ -22,9 +22,9 @@
 사용자는 앱에 접속한 뒤 로그인하거나 회원가입을 진행합니다. 이후 취향 설문을 통해 식단, 매운맛, 짠맛, 예산, 새로운 메뉴 선호 여부를 입력하고, 앱은 이 정보를 바탕으로 추천 메뉴를 보여줍니다. 추천 메뉴에서 주변 식당 찾기를 누르면 현재 위치 기준 주변 식당과 도보 시간을 확인할 수 있습니다.
 
 <p align="center">
-  <img src="images/KakaoTalk_20260506_224122017_08.jpg" width="210" alt="매운맛 설문 화면" />
-  <img src="images/KakaoTalk_20260506_224122017_09.jpg" width="210" alt="간 선호도 설문 화면" />
-  <img src="images/KakaoTalk_20260506_230526395_01.jpg" width="210" alt="AI 분석 대기 화면" />
+  <img src="images/screen-survey-spicy.jpg" width="210" alt="매운맛 설문 화면" />
+  <img src="images/screen-survey-salty.jpg" width="210" alt="간 선호도 설문 화면" />
+  <img src="images/screen-loading-analysis.jpg" width="210" alt="AI 분석 대기 화면" />
 </p>
 
 1. 앱 진입
@@ -39,9 +39,9 @@
    - 추천 메뉴와 연결된 주변 식당을 지도와 목록으로 확인합니다.
 
 <p align="center">
-  <img src="images/KakaoTalk_20260506_232700698_01.jpg" width="210" alt="미니게임 화면" />
-  <img src="images/KakaoTalk_20260506_232700698.jpg" width="210" alt="미니게임 결과 화면" />
-  <img src="images/KakaoTalk_20260506_225418805.jpg" width="210" alt="주변 식당 지도 화면" />
+  <img src="images/screen-mini-game.jpg" width="210" alt="미니게임 화면" />
+  <img src="images/screen-mini-game-result.jpg" width="210" alt="미니게임 결과 화면" />
+  <img src="images/screen-nearby-map.jpg" width="210" alt="주변 식당 지도 화면" />
 </p>
 
 ## 데이터 분석 입문 과정에서 배운 흐름
