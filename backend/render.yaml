@@ -1,5 +1,4 @@
 services:
-  # FastAPI �鿣�� ����
   - type: web
     name: menu-recommend-api
     env: python
@@ -7,44 +6,33 @@ services:
     buildCommand: pip install -r requirements.txt
     startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
     envVars:
-      # TiDB Cloud ���� ����
       - key: PYTHON_VERSION
         value: 3.11.8
-      
       - key: TIDB_HOST
-        value: gateway01.ap-northeast-1.prod.aws.tidbcloud.com
+        sync: false
       - key: TIDB_PORT
         value: 4000
       - key: TIDB_USER
-        value: 4R3uzcejsPmMq28.root
+        sync: false
       - key: TIDB_PASSWORD
-        value: MYtryu4hzULop2t1
+        sync: false
       - key: TIDB_DATABASE
         value: test
-      
-      # JWT ����
       - key: SECRET_KEY
         generateValue: true
       - key: ALGORITHM
         value: HS256
       - key: ACCESS_TOKEN_EXPIRE_MINUTES
         value: 30
-      
-      # ���û API
       - key: KMA_API_KEY
-        value: kZsudkRgRWCbLnZEYMVg5Q
+        sync: false
       - key: KMA_WEATHER_URL
         value: https://apihub.kma.go.kr/api/typ02/openApi/VilageFcstInfoService_2.0/getUltraSrtFcst
-      
-      # ��ǥ ����
       - key: SEOUL_NX
         value: 55
       - key: SEOUL_NY
         value: 127
-      
-      # ȯ�� ����
       - key: ENVIRONMENT
         value: production
 
-# Render ���� ����
 version: "1"
